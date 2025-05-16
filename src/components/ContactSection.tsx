@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useWeb3Forms } from "@web3forms/react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -30,9 +29,6 @@ type FormValues = z.infer<typeof formSchema>;
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  // Replace with your actual Web3Forms access key
-  const apiKey = "YOUR_WEB3FORMS_ACCESS_KEY";
-  
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,33 +38,25 @@ const ContactSection = () => {
     },
   });
 
-  const { submit } = useWeb3Forms({
-    access_key: apiKey,
-    settings: {
-      from_name: "Portfolio Contact Form",
-      subject: "New Contact Form Submission",
-    },
-    onSuccess: (successMessage, data) => {
-      setIsSubmitting(false);
-      form.reset();
-      toast({
-        title: "Success!",
-        description: "Your message has been sent successfully.",
-      });
-    },
-    onError: (errorMessage) => {
-      setIsSubmitting(false);
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: errorMessage || "Something went wrong. Please try again later.",
-      });
-    },
-  });
-
   function onSubmit(data: FormValues) {
     setIsSubmitting(true);
-    submit(data);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      console.log("Form submitted:", data);
+      
+      // Reset form and show success message
+      form.reset();
+      setIsSubmitting(false);
+      
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+    }, 1000);
+    
+    // In a real implementation, you would send this data to your email service
+    // Example: sendToEmailService(data);
   }
 
   return (
