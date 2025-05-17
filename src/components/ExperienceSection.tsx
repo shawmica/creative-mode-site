@@ -34,7 +34,14 @@ const ExperienceSection = () => {
         
         <div className="space-y-6">
           {experienceData.map((item, index) => (
-            <Card key={item.id} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+            <Card 
+              key={item.id} 
+              style={{ 
+                opacity: 0, 
+                animation: "fade-in 0.6s ease-out forwards", 
+                animationDelay: `${index * 200}ms` 
+              }}
+            >
               <CardHeader className="flex flex-row items-start space-x-4 pb-2">
                 <div className="bg-primary/10 p-2 rounded-lg">
                   <Briefcase className="h-5 w-5 text-primary" />

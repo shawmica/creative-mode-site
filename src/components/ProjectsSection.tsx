@@ -41,7 +41,15 @@ const ProjectsSection = () => {
         
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projectsData.map((project, index) => (
-            <Card key={project.id} className="hover-scale overflow-hidden animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+            <Card 
+              key={project.id} 
+              className="hover-scale overflow-hidden" 
+              style={{ 
+                opacity: 0,
+                animation: "fade-in 0.6s ease-out forwards",
+                animationDelay: `${index * 150}ms` 
+              }}
+            >
               <div className="aspect-video w-full overflow-hidden">
                 <img 
                   src={project.imageUrl} 

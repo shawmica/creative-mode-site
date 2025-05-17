@@ -9,17 +9,17 @@ const AboutSection = () => {
         <h2 className="text-3xl font-bold tracking-tight mb-8 animate-fade-in">About Me</h2>
         
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="space-y-4 animate-fade-in animation-delay-100">
-            <p>
+          <div className="space-y-4">
+            <p className="animate-fade-in animation-delay-100">
               I'm a full-stack developer with a passion for creating beautiful, functional web applications. 
               With over X years of experience in the industry, I've worked on a variety of projects from 
               small business websites to large enterprise applications.
             </p>
-            <p>
+            <p className="animate-fade-in animation-delay-200">
               My journey in software development began when I was in college, and I've been hooked ever since. 
               I love the challenge of solving complex problems and the satisfaction of creating something useful.
             </p>
-            <p>
+            <p className="animate-fade-in animation-delay-300">
               When I'm not coding, you can find me hiking, reading, or experimenting with new technologies.
             </p>
           </div>

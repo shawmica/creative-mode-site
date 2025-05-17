@@ -14,7 +14,7 @@ const HeroSection = () => {
             <p className="text-xl text-muted-foreground md:text-2xl animate-fade-in animation-delay-200">
               A passionate full-stack developer building elegant, performant, and user-friendly applications.
             </p>
-            <div className="flex flex-wrap gap-4 pt-4 animate-fade-in animation-delay-300">
+            <div className="flex flex-wrap gap-4 pt-4 animate-fade-in animation-delay-400">
               <Button asChild size="lg" className="hover-scale">
                 <a href="#projects">
                   View My Work
@@ -27,7 +27,7 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="order-1 md:order-2 animate-fade-in animation-delay-200">
+          <div className="order-1 md:order-2 animate-fade-in animation-delay-300">
             <div className="aspect-square max-w-md mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
               <img 
                 src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800"

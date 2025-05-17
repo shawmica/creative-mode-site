@@ -40,8 +40,12 @@ const CertificationsSection = () => {
           {certificationsData.map((certification, index) => (
             <Card 
               key={certification.id} 
-              className="overflow-hidden hover-scale animate-fade-in" 
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="overflow-hidden hover-scale"
+              style={{ 
+                opacity: 0, 
+                animation: "fade-in 0.6s ease-out forwards", 
+                animationDelay: `${index * 150}ms` 
+              }}
             >
               <div className="aspect-video w-full overflow-hidden">
                 <img 

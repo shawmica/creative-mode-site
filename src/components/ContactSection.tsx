@@ -69,7 +69,7 @@ const ContactSection = () => {
             <p className="text-lg">
               I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to say hello, feel free to reach out!
             </p>
-            <div className="space-y-2">
+            <div className="space-y-2 animate-fade-in animation-delay-200">
               <p className="flex items-center text-muted-foreground">
                 <span className="font-medium mr-2">Email:</span>
                 <a href="mailto:your-email@example.com" className="hover:text-foreground transition-colors">
@@ -83,7 +83,7 @@ const ContactSection = () => {
             </div>
           </div>
           
-          <Card className="animate-fade-in animation-delay-200">
+          <Card className="animate-fade-in animation-delay-300">
             <div className="p-6">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

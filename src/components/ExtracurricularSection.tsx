@@ -43,8 +43,12 @@ const ExtracurricularSection = () => {
           {extracurricularData.map((activity, index) => (
             <Card 
               key={activity.id} 
-              className="overflow-hidden animate-fade-in hover:shadow-lg transition-all" 
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="overflow-hidden hover:shadow-lg transition-all"
+              style={{ 
+                opacity: 0, 
+                animation: "fade-in 0.6s ease-out forwards", 
+                animationDelay: `${index * 200}ms` 
+              }}
             >
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="h-full overflow-hidden md:col-span-1">

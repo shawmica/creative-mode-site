@@ -89,14 +89,12 @@ const SkillsSection = () => {
         </div>
         
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in animation-delay-200">
           {filteredTechnologies.map((tech, index) => (
             <Card 
               key={tech.name}
-              className={`overflow-hidden transform transition-all duration-500 hover:shadow-lg ${
-                animatedItems[tech.name] ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-              }`}
-              style={{ transitionDelay: `${index * 50}ms` }}
+              className={`overflow-hidden transform transition-all duration-500 hover:shadow-lg`}
+              style={{ animationDelay: `${index * 50 + 300}ms`, opacity: 0, animation: "fade-in 0.6s ease-out forwards" }}
             >
               <CardContent className="p-5">
                 <div className="flex items-center space-x-4">
@@ -122,7 +120,7 @@ const SkillsSection = () => {
         
         {/* Category Descriptions */}
         <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <div className="space-y-5 animate-fade-in animation-delay-200">
+          <div className="space-y-5 animate-fade-in animation-delay-300">
             <div>
               <h3 className="text-xl font-bold tracking-tight mb-2">Frontend Development</h3>
               <p className="text-muted-foreground">Creating responsive, interactive user interfaces using modern frameworks and libraries like React and Next.js. Strong focus on performance optimization and clean, maintainable code.</p>
@@ -133,7 +131,7 @@ const SkillsSection = () => {
             </div>
           </div>
           
-          <div className="space-y-5 animate-fade-in animation-delay-300">
+          <div className="space-y-5 animate-fade-in animation-delay-400">
             <div>
               <h3 className="text-xl font-bold tracking-tight mb-2">UI/UX Design</h3>
               <p className="text-muted-foreground">Designing intuitive user experiences with a focus on usability, accessibility, and visual appeal. Proficient with design tools like Figma and Adobe XD.</p>

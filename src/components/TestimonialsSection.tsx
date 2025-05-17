@@ -35,8 +35,15 @@ const TestimonialsSection = () => {
         
         <div className="grid gap-6 md:grid-cols-3">
           {testimonialsData.map((testimonial, index) => (
-            <Card key={testimonial.id} className="h-full flex flex-col animate-fade-in" 
-                  style={{ animationDelay: `${index * 100}ms` }}>
+            <Card 
+              key={testimonial.id} 
+              className="h-full flex flex-col"
+              style={{ 
+                opacity: 0, 
+                animation: "fade-in 0.6s ease-out forwards", 
+                animationDelay: `${index * 150}ms` 
+              }}
+            >
               <CardContent className="p-6 flex-1 flex flex-col">
                 <QuoteIcon className="h-8 w-8 text-primary/30 mb-4" />
                 <p className="flex-1 italic mb-6">"{testimonial.quote}"</p>
