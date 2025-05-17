@@ -4,7 +4,7 @@ import { Code, Layout, Database } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 scroll-mt-16">
+    <section id="about" className="py-16 scroll-mt-16 animate-fade-in">
       <div className="container">
         <h2 className="text-3xl font-bold tracking-tight mb-8 animate-fade-in">About Me</h2>
         

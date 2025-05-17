@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Trophy, Flag } from "lucide-react";
 
@@ -33,7 +34,7 @@ const extracurricularData = [
 
 const ExtracurricularSection = () => {
   return (
-    <section id="extracurricular" className="py-16 scroll-mt-16">
+    <section id="extracurricular" className="py-16 scroll-mt-16 animate-fade-in">
       <div className="container">
         <h2 className="text-3xl font-bold tracking-tight mb-8 animate-fade-in">Extracurricular Activities</h2>
         
@@ -42,7 +43,7 @@ const ExtracurricularSection = () => {
             <Card 
               key={activity.id} 
               className="overflow-hidden animate-fade-in hover:shadow-lg transition-all" 
-              style={{ animationDelay: `${index * 100}ms` }}
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="h-full overflow-hidden md:col-span-1">

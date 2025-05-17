@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge, Award } from "lucide-react";
 
@@ -30,7 +31,7 @@ const certificationsData = [
 
 const CertificationsSection = () => {
   return (
-    <section id="certifications" className="py-16 scroll-mt-16 bg-muted/30">
+    <section id="certifications" className="py-16 scroll-mt-16 bg-muted/30 animate-fade-in">
       <div className="container">
         <h2 className="text-3xl font-bold tracking-tight mb-8 animate-fade-in">Certifications</h2>
         

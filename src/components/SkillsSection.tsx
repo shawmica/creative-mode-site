@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
@@ -66,7 +67,7 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="py-16 scroll-mt-16 bg-muted/30">
-      <div className="container">
+      <div className="container animate-fade-in">
         <h2 className="text-3xl font-bold tracking-tight mb-8 animate-fade-in">Skills & Expertise</h2>
         
         {/* Category Filter */}

@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ id }: HeroSectionProps) => {
   return (
-    <section id={id} className="py-20 md:py-28">
+    <section id={id} className="py-20 md:py-28 bg-background">
       <div className="container">
         <div className="flex flex-col mb-12 animate-fade-in">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-4">

@@ -28,13 +28,13 @@ const experienceData = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-16 scroll-mt-16">
+    <section id="experience" className="py-16 scroll-mt-16 animate-fade-in">
       <div className="container">
         <h2 className="text-3xl font-bold tracking-tight mb-8 animate-fade-in">Experience</h2>
         
         <div className="space-y-6">
           {experienceData.map((item, index) => (
-            <Card key={item.id} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+            <Card key={item.id} className="animate-fade-in" style={{ animationDelay: `${index * 150}ms` }}>
               <CardHeader className="flex flex-row items-start space-x-4 pb-2">
                 <div className="bg-primary/10 p-2 rounded-lg">
                   <Briefcase className="h-5 w-5 text-primary" />
