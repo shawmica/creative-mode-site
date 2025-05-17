@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Trophy, Flag } from "lucide-react";
 
@@ -36,8 +35,7 @@ const ExtracurricularSection = () => {
   return (
     <section id="extracurricular" className="py-16 scroll-mt-16">
       <div className="container">
-        <h2 className="text-3xl font-bold tracking-tight mb-2 animate-fade-in">Extracurricular Activities</h2>
-        <p className="text-muted-foreground mb-8 animate-fade-in animation-delay-100">Community involvement and personal initiatives</p>
+        <h2 className="text-3xl font-bold tracking-tight mb-8 animate-fade-in">Extracurricular Activities</h2>
         
         <div className="grid gap-8">
           {extracurricularData.map((activity, index) => (
