@@ -31,9 +31,10 @@ const certificationsData = [
 
 const CertificationsSection = () => {
   return (
-    <section id="certifications" className="py-16 scroll-mt-16 bg-muted/30 animate-fade-in">
+    <section id="certifications" className="py-16 scroll-mt-16 bg-muted/30">
       <div className="container">
-        <h2 className="text-3xl font-bold tracking-tight mb-8 animate-fade-in">Certifications</h2>
+        <h2 className="text-3xl font-bold tracking-tight mb-2 animate-fade-in">Certifications</h2>
+        <p className="text-muted-foreground mb-8 animate-fade-in animation-delay-100">Professional qualifications and achievements</p>
         
         <div className="grid gap-6 md:grid-cols-3">
           {certificationsData.map((certification, index) => (
