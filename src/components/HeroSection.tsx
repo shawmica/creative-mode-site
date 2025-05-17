@@ -2,9 +2,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  id?: string;
+}
+
+const HeroSection = ({ id }: HeroSectionProps) => {
   return (
-    <section className="py-20 md:py-28">
+    <section id={id} className="py-20 md:py-28">
       <div className="container">
         <div className="grid gap-12 md:grid-cols-2 items-center">
           <div className="space-y-6 order-2 md:order-1">
