@@ -22,6 +22,14 @@ const Header = () => {
     setMounted(true);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    setMobileMenuOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="border-b sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-backdrop-blur:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
@@ -43,53 +51,44 @@ const Header = () => {
         <NavigationMenu className="hidden md:block">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link to="/">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Home
-                </NavigationMenuLink>
-              </Link>
+              <button onClick={() => scrollToSection("hero")} className={navigationMenuTriggerStyle()}>
+                Home
+              </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/#about">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  About
-                </NavigationMenuLink>
-              </Link>
+              <button onClick={() => scrollToSection("about")} className={navigationMenuTriggerStyle()}>
+                About
+              </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/#skills">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Skills
-                </NavigationMenuLink>
-              </Link>
+              <button onClick={() => scrollToSection("skills")} className={navigationMenuTriggerStyle()}>
+                Skills
+              </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/#projects">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Projects
-                </NavigationMenuLink>
-              </Link>
+              <button onClick={() => scrollToSection("projects")} className={navigationMenuTriggerStyle()}>
+                Projects
+              </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/#experience">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Experience
-                </NavigationMenuLink>
-              </Link>
+              <button onClick={() => scrollToSection("experience")} className={navigationMenuTriggerStyle()}>
+                Experience
+              </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/#testimonials">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Testimonials
-                </NavigationMenuLink>
-              </Link>
+              <button onClick={() => scrollToSection("certifications")} className={navigationMenuTriggerStyle()}>
+                Certifications
+              </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/#contact">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Contact
-                </NavigationMenuLink>
-              </Link>
+              <button onClick={() => scrollToSection("extracurricular")} className={navigationMenuTriggerStyle()}>
+                Extracurricular
+              </button>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <button onClick={() => scrollToSection("contact")} className={navigationMenuTriggerStyle()}>
+                Contact
+              </button>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
@@ -98,27 +97,30 @@ const Header = () => {
         {mobileMenuOpen && (
           <div className="fixed inset-0 top-16 z-50 bg-background p-6 md:hidden animate-fade-in">
             <nav className="flex flex-col space-y-4">
-              <Link to="/" className="text-lg font-medium hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+              <button onClick={() => scrollToSection("hero")} className="text-lg font-medium hover:text-primary">
                 Home
-              </Link>
-              <Link to="/#about" className="text-lg font-medium hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+              </button>
+              <button onClick={() => scrollToSection("about")} className="text-lg font-medium hover:text-primary">
                 About
-              </Link>
-              <Link to="/#skills" className="text-lg font-medium hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+              </button>
+              <button onClick={() => scrollToSection("skills")} className="text-lg font-medium hover:text-primary">
                 Skills
-              </Link>
-              <Link to="/#projects" className="text-lg font-medium hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+              </button>
+              <button onClick={() => scrollToSection("projects")} className="text-lg font-medium hover:text-primary">
                 Projects
-              </Link>
-              <Link to="/#experience" className="text-lg font-medium hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+              </button>
+              <button onClick={() => scrollToSection("experience")} className="text-lg font-medium hover:text-primary">
                 Experience
-              </Link>
-              <Link to="/#testimonials" className="text-lg font-medium hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
-                Testimonials
-              </Link>
-              <Link to="/#contact" className="text-lg font-medium hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+              </button>
+              <button onClick={() => scrollToSection("certifications")} className="text-lg font-medium hover:text-primary">
+                Certifications
+              </button>
+              <button onClick={() => scrollToSection("extracurricular")} className="text-lg font-medium hover:text-primary">
+                Extracurricular
+              </button>
+              <button onClick={() => scrollToSection("contact")} className="text-lg font-medium hover:text-primary">
                 Contact
-              </Link>
+              </button>
             </nav>
           </div>
         )}
